@@ -1,6 +1,6 @@
 # PHP代码加密后运行
 
-## 加密
+## 加密，修改KEY和IV
 
 KEY:AES-CBC-PKCS7的128bit密钥，必须是16位字符
 
@@ -133,7 +133,7 @@ func handle(path string, str1 string, str2 string) {
 
 ## 解密
 
-### 安装php扩展（可以在自己设备上安装，最后将扩展到so文件上传到目标服务器php扩展文件夹里）
+### 安装php扩展（可以在自己设备上安装，最后将扩展的so文件上传到目标服务器php扩展文件夹里）
 
 ```shell
 git clone https://github.com/SmileZD/PhpCompiler
