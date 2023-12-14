@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+$array = $argv;
+array_shift($array);
+$file = array_shift($array);
+if(empty($file)){
+    echo "{$file} not exist\n";
+}
+
+if(in_array('no-bak',$array)){
+    $bak = false;
+}else{
+    $bak = true;
+}
+
+
+require_once realpath(getcwd()).'/vendor/autoload.php';
+
+
+$i = EasySwoole\Compiler\Compiler::encrypt($file,$bak);
+
+echo "encrypt file num :".$i;
+
